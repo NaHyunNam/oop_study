@@ -1,20 +1,27 @@
 <?php
 // class 만드는 방법
 class MyFileObject{
+    private $filename;
     function __construct($fname){ // __construct 함수 호출하면 생성자로 하겠다라는 약속
         $this->filename = $fname; 
-        /*
-            생성자가 하는 역할
+        if(!file_exists($this->filename)){
+            die('There is no file '.$this->filename); //die는 프로그램을 종료하면서 입력값을 화면에 출력
+        }
+    /*     생성자가 하는 역할
             1. 인스턴스(new)가 생성될 때 필수적으로 필요한 데이터를 인자를 통해서 전달받을 수 있다.
             2. 이 함수가 인스턴스가 생성될 때 해야되는 필수적인 일을 수행하여 초기화 작업을 할 수 있다.
-        */
+    */
+
     }
     function isFile() {
         return is_file($this->filename); 
     }
+
 }
 
+
 $file = new MyFileObject('data.txt'); // class 사용 방법
+//$file = new MyFileObject();
 //$file->filename = 'data.txt'; // filename의 값을 쓰는 방식
 var_dump($file->isFile());
 var_dump($file->filename); // filename의 값을 가져오는 방식
