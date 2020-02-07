@@ -1,0 +1,15 @@
+{
+    "name": "namnahyun/composer-app",
+    "authors": [
+        {
+            "name": "NaHyunNam",
+            "email": "namnahyundev@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {"Greeting\\": "source/Greeting/"}
+    }
+}
