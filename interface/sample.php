@@ -12,7 +12,7 @@ class Concreate implements ContractInterface{
     }
 }
 $obj = new Concreate();
-if($obj->compare('test1','test1')){
+if($obj->compare('test1','test')){
     echo '<h1>same</h1>';
 }else{
     echo '<h1>different</h1>';
